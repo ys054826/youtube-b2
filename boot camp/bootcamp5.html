@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="heading">javascript examples</h2>
+
+    <input id="userinput" placeholder="enter number">
+
+    <!-- <input onkeyup="myFunction2()"> -->
+    <!-- <input onkeydown="myFunction2()"> -->
+    <button onclick="myFunction3()"> Click Me! </button>
+
+    <script>
+        //define javascript here.
+        function myFunction2(){
+            console.log ("second function!@@")
+        }
+        // function myfunction(){
+        //  function body
+        //  alert("javascript function!!!")
+        //     let myvar = confirm("Are You Sure?");
+        //     consloe.log("value in myvar is:");
+        //     consloe.log(myvar)
+        //      let name = prompt("enter your name.");   
+        //     console.log("name is:", name)
+        //      let myvar =confirm("Are you sure?");
+        //     console.log(myvar)
+        // }
+        
+        function myFunction3(){
+            let name = document.getElementById("userinput").value;
+            console.log("selected value", name)
+            if(name.length < 3){
+                alert("ERROR: number cannot be less than 3")
+            } else if (name.length > 10){
+                alert("ERROR: number cannot be greater than 10")
+            } else{
+                // only numeric values allowed
+                for(let i = 0; i < name.length; i++){
+                // i++ is i=i+1
+                let digit = parseInt(name[i]);
+                if(isNaN(digit)){
+                    alert("text should only have numbers");
+                }else{
+                    console.log("looks good")
+                }
+
+            }
+             console.log("validation complete")
+            }
+            alert(" Welcome " + name)
+
+            let header = document.getElementById("heading");
+            header.innerHTML=" Welcome " + name;
+        } 
+    </script>
+</body>
+</html>

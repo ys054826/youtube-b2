@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+   {
+    clrscr();
+   int a,b,c,d,e;
+   int sum;
+   float percent;
+   printf("enter the numbers");
+   scanf("%d %d %d %d %d", &a,&b,&c,&d,&e);
+   su,=a+b+c+d+e;
+   percent = sum/500;
+   printf("total sum = %d",sum);
+   printf("percentage = %f",percent);
+   
+   return 0;
+   }
